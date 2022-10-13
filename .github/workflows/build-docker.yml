@@ -37,7 +37,7 @@ jobs:
 
       - name: Pull image
         run: |
-          docker pull $DOCKER_IMAGE
+          docker pull ${{ inputs.image }}
 
       - name: Build wheels
         run: |
