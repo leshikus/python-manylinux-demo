@@ -34,7 +34,6 @@ jobs:
       - name: Set env context
         run: |
           echo RUN_STAMP=docker-${{ runner.os }}-${{ inputs.name }} >>$GITHUB_ENV
-          cat docker/dev/Dockerfile docker/dev/Dockerfile.${{ inputs.name }} >Dockerfile
 
       - name: Pull image
         run: |
