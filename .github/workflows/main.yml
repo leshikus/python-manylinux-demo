@@ -1,0 +1,16 @@
+name: Build
+on:
+  workflow_dispatch:
+    inputs:
+      reset-cache:
+        type: boolean
+        default: true
+
+  push:
+    paths-ignore:
+      - 'docs/**'
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-docker.yml
+
