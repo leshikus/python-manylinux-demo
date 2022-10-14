@@ -13,7 +13,8 @@ function repair_wheel {
 
 # Install a system package required by our library
 yum-config-manager --add-repo=https://mirror.steadfastnet.com/epel/7/x86_64/
-yum install -y atlas-devel blas
+yum install -y atlas-devel
+rpm -ql atlas-devel
 
 # Compile wheels
 for PYBIN in /opt/python/*/bin; do
